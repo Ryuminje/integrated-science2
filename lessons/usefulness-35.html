@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3-1-1(1) 과학의 유용성과 필요성(1)</title>
+<style>
+  :root{
+    --ink:#161228; --paper:#f6f5fb; --line:#d2cde6;
+    --indigo:#4338ca; --indigo-d:#2e2383; --indigo-l:#e8e6fa;
+    --coral:#c2410c; --coral-l:#ffedd5;
+    --slate:#44405c; --card:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Pretendard","맑은 고딕","Malgun Gothic",system-ui,sans-serif;
+       background:#100d1c;color:var(--ink);overflow:hidden}
+  .slide{display:none;width:100vw;height:100vh;padding:40px 52px 74px;background:var(--paper);
+         flex-direction:column;overflow:hidden}
+  .slide.on{display:flex}
+  h1{font-size:50px;line-height:1.2;color:var(--indigo-d);margin-bottom:10px}
+  h2{font-size:36px;color:var(--indigo-d);margin-bottom:16px;
+     border-bottom:5px solid var(--indigo);padding-bottom:8px}
+  h3{font-size:25px;color:var(--coral);margin-bottom:8px}
+  p,li,td,th{font-size:21px;line-height:1.55}
+  .lead{font-size:25px}
+  .big{font-size:32px;font-weight:700;line-height:1.4}
+  .huge{font-size:42px;font-weight:800;line-height:1.3;color:var(--indigo-d)}
+  .sub{font-size:18px;color:var(--slate)}
+  .row{display:flex;gap:20px;flex:1;min-height:0}
+  .col{flex:1;display:flex;flex-direction:column;gap:14px;min-height:0}
+  .card{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:18px 20px}
+  .card.i{background:var(--indigo-l);border-color:#b9b2ee}
+  .card.c{background:var(--coral-l);border-color:#f3b98c}
+  /* 좌우비교형 전용 */
+  .vs{display:flex;gap:0;flex:1;min-height:0;align-items:stretch}
+  .side{flex:1;display:flex;flex-direction:column;gap:12px;min-height:0;padding:16px;border-radius:16px}
+  .side.a{background:var(--coral-l);border:3px solid var(--coral)}
+  .side.b{background:var(--indigo-l);border:3px solid var(--indigo)}
+  .side h3{font-size:27px;margin-bottom:4px}
+  .side.b h3{color:var(--indigo-d)}
+  .vsmid{width:66px;display:flex;align-items:center;justify-content:center}
+  .vsbadge{background:#161228;color:#fff;font-weight:800;font-size:22px;
+           width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+  figure{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:9px;
+         display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:0;overflow:hidden}
+  figure img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px}
+  figcaption{font-size:16px;color:var(--slate);margin-top:7px;text-align:center}
+  .imgrow{display:flex;gap:12px;flex:1;min-height:0}
+  .imgrow figure{flex:1}
+  table{border-collapse:collapse;width:100%;background:var(--card)}
+  th,td{border:1.5px solid var(--line);padding:9px 12px;text-align:left}
+  th{background:var(--indigo);color:#fff;font-size:19px}
+  td{font-size:19px}
+  ul{padding-left:25px} li{margin:5px 0}
+  .tag{display:inline-block;background:var(--indigo);color:#fff;font-size:17px;font-weight:700;
+       padding:4px 12px;border-radius:999px;margin-right:8px}
+  .tag.c{background:var(--coral)} .tag.g{background:#52506b}
+  .steps{display:flex;gap:12px}
+  .step{flex:1;background:var(--card);border:2px solid var(--line);border-radius:12px;padding:14px}
+  .step b{display:block;color:var(--indigo-d);font-size:20px;margin-bottom:6px}
+  .q{background:#fff;border:3px solid var(--coral);border-radius:16px;padding:20px;margin-bottom:13px}
+  .q .ask{font-size:23px;font-weight:700}
+  .ans{display:none;margin-top:11px;padding:13px;background:var(--coral-l);border-radius:10px;font-size:20px}
+  .ans.show{display:block}
+  .btn{margin-top:9px;font-size:18px;padding:8px 16px;border:2px solid var(--coral);
+       background:#fff;color:var(--coral);border-radius:999px;cursor:pointer;font-weight:700}
+  .btn:hover{background:var(--coral);color:#fff}
+  footer{position:fixed;left:0;right:0;bottom:0;height:54px;background:#100d1c;color:#ddd8f5;
+         display:flex;align-items:center;gap:16px;padding:0 20px;font-size:17px}
+  #bar{position:fixed;left:0;bottom:54px;height:6px;background:var(--indigo);transition:width .2s}
+  .nav{background:#2a2447;color:#ddd8f5;border:1px solid #433a70;border-radius:8px;
+       font-size:20px;padding:4px 14px;cursor:pointer}
+  .nav:hover{background:#3a3160}
+  .spacer{flex:1}
+  .objs li{font-size:22px}
+  .note{font-size:17px;color:var(--slate);margin-top:6px}
+  .kw{background:#ddd9f7;border-radius:6px;padding:1px 7px;font-weight:700}
+  svg text{font-family:inherit}
+</style>
+</head>
+<body>
+
+<!-- 1 표지 -->
+<section class="slide on">
+  <p class="sub">Ⅲ. 과학과 미래 사회 › 1. 과학 기술의 활용 › 01 과학의 유용성과 필요성 (교과서 114~115쪽)</p>
+  <h1>같은 병을 두 가지 방법으로<br>진단할 수 있다면?</h1>
+  <p class="lead" style="color:var(--slate)">35차시 · <b>50분</b></p>
+  <div class="row" style="margin-top:16px">
+    <div class="col" style="flex:1.2">
+      <div class="card i">
+        <h3 style="color:var(--indigo-d)">오늘의 학습목표</h3>
+        <ul class="objs">
+          <li>감염병과 <span class="kw">병원체</span>의 종류를 사례를 들어 설명한다.</li>
+          <li>두 가지 진단 검사법을 원리·시간·비용·정확도로 <span class="kw">비교·분석</span>한다.</li>
+          <li>상황에 따라 어떤 검사가 알맞은지 <span class="kw">판단하고 평가</span>한다.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <b>지난 시간 복습</b> — 신재생 에너지는 고갈 염려가 적지만 <b>발전 효율과 초기 비용</b>이라는 숙제가 남는다는 것을 배웠습니다. 오늘도 '좋은 기술'을 고르는 기준을 따져 봅니다.
+      </div>
+    </div>
+    <figure style="flex:1"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22600%22%20viewBox%3D%220%200%20800%20600%22%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22%23e7e7ea%22/%3E%3Crect%20x%3D%22250%22%20y%3D%22255%22%20width%3D%22300%22%20height%3D%2290%22%20fill%3D%22%23f2f2f3%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22292%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2226%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EA%B5%90%EA%B3%BC%EC%84%9C%20%EC%82%AC%EC%A7%84%20%EC%9E%90%EB%A6%AC%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22328%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EC%88%98%EC%97%85%20%EC%8B%9C%EA%B0%84%EC%97%90%20%ED%95%A8%EA%BB%98%20%EB%B4%85%EB%8B%88%EB%8B%A4%3C/text%3E%3C/svg%3E" alt="의료진이 앉아 있는 사람의 코에서 면봉으로 검체를 채취하는 그림"><figcaption>검체를 채취하는 장면</figcaption></figure>
+  </div>
+</section>
+
+<!-- 2 핵심 질문 -->
+<section class="slide">
+  <h2>오늘의 핵심 질문</h2>
+  <div class="row">
+    <div class="col" style="flex:1.2;justify-content:center">
+      <div class="card c">
+        <p class="huge">"같은 감염병을<br>두 가지 방법으로 진단할 수 있다면,<br>무엇을 기준으로 골라야 할까?"</p>
+        <p class="note">정답이 하나로 정해져 있지 않습니다. 수업이 끝날 때 자기 문장으로 답해 봅시다.</p>
+      </div>
+      <div class="card">
+        <p class="lead">오늘 따져 볼 네 가지 기준 &nbsp;
+          <span class="tag">시간</span><span class="tag">비용</span><span class="tag">정확도</span><span class="tag">상황</span></p>
+      </div>
+    </div>
+    <figure style="flex:1"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22600%22%20viewBox%3D%220%200%20800%20600%22%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22%23e7e7ea%22/%3E%3Crect%20x%3D%22250%22%20y%3D%22255%22%20width%3D%22300%22%20height%3D%2290%22%20fill%3D%22%23f2f2f3%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22292%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2226%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EA%B5%90%EA%B3%BC%EC%84%9C%20%EC%82%AC%EC%A7%84%20%EC%9E%90%EB%A6%AC%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22328%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EC%88%98%EC%97%85%20%EC%8B%9C%EA%B0%84%EC%97%90%20%ED%95%A8%EA%BB%98%20%EB%B4%85%EB%8B%88%EB%8B%A4%3C/text%3E%3C/svg%3E" alt="색색의 봉우리로 나타난 유전자 염기서열 분석 화면"><figcaption>유전자 정보를 읽어 내는 기술</figcaption></figure>
+  </div>
+</section>
+
+<!-- 3 도입 -->
+<section class="slide">
+  <h2><span class="tag g">도입 10분</span> 내 몸의 데이터를 숫자로 본다면</h2>
+  <div class="row">
+    <div class="col" style="flex:1.15">
+      <div class="card i">
+        <h3 style="color:var(--indigo-d)">활동으로 단원 열기 — 스마트 기기로 신체 데이터 측정하기</h3>
+        <p class="lead">스마트 워치나 건강 앱으로 <b>심박수 · 체온 · 혈중 산소포화도</b> 같은 데이터를 재고, 모둠원과 비교해 봅시다.</p>
+        <p class="note">기기가 없으면 인터넷에서 '실시간 건강 데이터'를 검색해 어떤 값을 잴 수 있는지 찾아보아도 좋습니다.</p>
+      </div>
+      <div class="card">
+        <h3>생각해 봅시다</h3>
+        <ul>
+          <li>내 숫자가 모둠원과 다르다면, 그것만으로 <b>아프다</b>고 말할 수 있을까요?</li>
+          <li>몸 상태를 <b>숫자로 바꾸면</b> 무엇이 달라질까요?</li>
+        </ul>
+        <p class="note">→ 활동지 1번에 한 줄로 적어 봅시다.</p>
+      </div>
+      <div class="card c">
+        <p class="lead">몸의 상태를 <b>겉모습이 아니라 측정값으로</b> 확인하는 것 — 오늘 배울 <b>감염병 진단</b>도 똑같은 생각에서 출발합니다.</p>
+      </div>
+    </div>
+    <figure style="flex:.9"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22600%22%20viewBox%3D%220%200%20800%20600%22%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22%23e7e7ea%22/%3E%3Crect%20x%3D%22250%22%20y%3D%22255%22%20width%3D%22300%22%20height%3D%2290%22%20fill%3D%22%23f2f2f3%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22292%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2226%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EA%B5%90%EA%B3%BC%EC%84%9C%20%EC%82%AC%EC%A7%84%20%EC%9E%90%EB%A6%AC%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22328%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EC%88%98%EC%97%85%20%EC%8B%9C%EA%B0%84%EC%97%90%20%ED%95%A8%EA%BB%98%20%EB%B4%85%EB%8B%88%EB%8B%A4%3C/text%3E%3C/svg%3E" alt="책상에 마주 앉아 태블릿과 책을 보며 이야기하는 학생 두 명"><figcaption>모둠원과 측정값을 비교해 봅시다</figcaption></figure>
+  </div>
+</section>
+
+<!-- 4 전개 병원체 -->
+<section class="slide">
+  <h2><span class="tag">전개</span> [무엇] 감염병을 일으키는 것 — 병원체</h2>
+  <div class="row">
+    <div class="col" style="flex:1.3">
+      <div class="card i">
+        <p class="big"><b>감염병</b> = <b>병원체</b>에 감염되어 발생하는 질병</p>
+        <p class="note">병원체는 몸 안에 들어가 증식하면서 세포를 파괴하거나 해로운 독소를 분비합니다.</p>
+      </div>
+      <table>
+        <tr><th style="width:17%">병원체</th><th>이런 병을 일으킨다</th><th style="width:22%">치료에 쓰는 약</th></tr>
+        <tr><td><b>세균</b></td><td>폐결핵, 콜레라, 파상풍, 세균성식중독</td><td>항생제</td></tr>
+        <tr><td><b>바이러스</b></td><td>감기, 독감, 소아마비, 후천성면역결핍증(AIDS)</td><td>항바이러스제</td></tr>
+        <tr><td><b>곰팡이</b></td><td>무좀, 만성폐질환 등</td><td>항진균제</td></tr>
+        <tr><td><b>원생생물</b></td><td>말라리아, 수면병, 아메바성이질</td><td>—</td></tr>
+      </table>
+      <p class="note">말라리아는 말라리아원충이 <b>모기</b>를 매개로, 수면병은 트리파노소마가 <b>체체파리</b>를 매개로 사람에게 옮습니다.</p>
+    </div>
+    <div class="col">
+      <div class="card" style="flex:1;display:flex;align-items:center;justify-content:center">
+        <svg viewBox="0 0 300 300" width="100%" height="100%" role="img" aria-label="왼쪽은 세포벽과 디엔에이를 가진 세균, 오른쪽은 단백질 껍질과 알엔에이, 돌기를 가진 바이러스의 구조를 나란히 그린 그림">
+          <text x="75" y="24" font-size="19" font-weight="700" text-anchor="middle" fill="#2e2383">세균</text>
+          <ellipse cx="75" cy="110" rx="62" ry="48" fill="#e8e6fa" stroke="#4338ca" stroke-width="4"/>
+          <ellipse cx="75" cy="110" rx="52" ry="38" fill="#fff" stroke="#8b86d6" stroke-width="2.5"/>
+          <path d="M55 105 q12 -14 24 0 q12 14 24 0" stroke="#c2410c" stroke-width="4" fill="none"/>
+          <circle cx="58" cy="128" r="4" fill="#4338ca"/><circle cx="88" cy="126" r="4" fill="#4338ca"/>
+          <text x="75" y="178" font-size="15" text-anchor="middle" fill="#44405c">세포벽 · DNA · 리보솜</text>
+          <text x="225" y="24" font-size="19" font-weight="700" text-anchor="middle" fill="#2e2383">바이러스</text>
+          <circle cx="225" cy="110" r="50" fill="#ffedd5" stroke="#c2410c" stroke-width="4"/>
+          <circle cx="225" cy="110" r="26" fill="#fff" stroke="#c2410c" stroke-width="2.5"/>
+          <path d="M213 110 q6 -9 12 0 q6 9 12 0" stroke="#4338ca" stroke-width="3.5" fill="none"/>
+          <g stroke="#c2410c" stroke-width="4">
+            <line x1="225" y1="60" x2="225" y2="48"/><line x1="225" y1="160" x2="225" y2="172"/>
+            <line x1="175" y1="110" x2="163" y2="110"/><line x1="275" y1="110" x2="287" y2="110"/>
+            <line x1="190" y1="75" x2="181" y2="66"/><line x1="260" y1="145" x2="269" y2="154"/>
+            <line x1="260" y1="75" x2="269" y2="66"/><line x1="190" y1="145" x2="181" y2="154"/>
+          </g>
+          <text x="225" y="178" font-size="15" text-anchor="middle" fill="#44405c">단백질 껍질 · 핵산 · 돌기</text>
+          <rect x="18" y="196" width="264" height="92" rx="10" fill="#fff" stroke="#4338ca" stroke-width="2.5"/>
+          <text x="150" y="222" font-size="18" font-weight="700" text-anchor="middle" fill="#2e2383">오늘 기억할 두 물질</text>
+          <text x="150" y="250" font-size="18" text-anchor="middle" fill="#c2410c" font-weight="700">단백질</text>
+          <text x="150" y="275" font-size="18" text-anchor="middle" fill="#4338ca" font-weight="700">핵산(유전 물질)</text>
+        </svg>
+      </div>
+      <div class="card c"><p class="lead">이 <b>두 물질</b>이 곧 두 가지 검사법의 표적이 됩니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 오개념 -->
+<section class="slide">
+  <h2><span class="tag c">헷갈리기 쉬운 곳</span> 전염과 감염은 같은 말일까?</h2>
+  <div class="vs">
+    <div class="side a">
+      <h3>전염</h3>
+      <p class="big">병원체가 <b>한 생명체에서 다른 생명체로 퍼지는 것</b></p>
+      <p class="lead">→ 사람과 사람 <b>사이</b>에서 일어나는 일</p>
+    </div>
+    <div class="vsmid"><div class="vsbadge">≠</div></div>
+    <div class="side b">
+      <h3>감염</h3>
+      <p class="big">병원체가 <b>몸에 침입해 성장하고 증식하는 것</b></p>
+      <p class="lead">→ 한 사람의 <b>몸 안</b>에서 일어나는 일</p>
+    </div>
+  </div>
+  <div class="card c" style="margin-top:16px">
+    <p class="big">그래서 — 병원체에 <u>감염</u>되었더라도 다른 사람에게 옮기지 않으면 <u>전염성</u>은 없습니다.</p>
+  </div>
+</section>
+
+<!-- 6 진단이란 -->
+<section class="slide">
+  <h2><span class="tag">전개</span> [무엇] 감염병 진단이란</h2>
+  <div class="row">
+    <div class="col" style="flex:1.1">
+      <div class="card i">
+        <p class="big">병원체에 감염되었는지를 <b>판별하는 것</b></p>
+      </div>
+      <div class="card" style="flex:1;display:flex;align-items:center;justify-content:center">
+        <svg viewBox="0 0 600 150" width="100%" height="100%" role="img" aria-label="증상이 나타난 사람에게서 검체를 채취하고, 실험실에서 병원체의 존재를 확인해 진단에 이르는 세 단계 흐름도">
+          <rect x="6" y="36" width="160" height="78" rx="10" fill="#ffedd5" stroke="#c2410c" stroke-width="3"/>
+          <text x="86" y="68" font-size="18" font-weight="700" text-anchor="middle" fill="#c2410c">증상이 있는 사람</text>
+          <text x="86" y="94" font-size="17" text-anchor="middle" fill="#8a3708">에게서 검체 채취</text>
+          <path d="M172 75 L208 75" stroke="#44405c" stroke-width="5" marker-end="url(#a1)"/>
+          <rect x="214" y="36" width="170" height="78" rx="10" fill="#e8e6fa" stroke="#4338ca" stroke-width="3"/>
+          <text x="299" y="68" font-size="18" font-weight="700" text-anchor="middle" fill="#2e2383">실험실에서</text>
+          <text x="299" y="94" font-size="17" text-anchor="middle" fill="#2e2383">병원체 존재 확인</text>
+          <path d="M390 75 L426 75" stroke="#44405c" stroke-width="5" marker-end="url(#a1)"/>
+          <rect x="432" y="36" width="162" height="78" rx="10" fill="#161228"/>
+          <text x="513" y="82" font-size="22" font-weight="800" text-anchor="middle" fill="#fff">진단</text>
+          <defs><marker id="a1" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+            <path d="M0,0 L14,7 L0,14 z" fill="#44405c"/></marker></defs>
+        </svg>
+      </div>
+      <div class="card c">
+        <p class="lead">여기서 질문이 하나 생깁니다 — <b>'병원체가 있다'는 것을 무엇으로 확인할까요?</b><br>
+        <span class="sub">바로 앞에서 본 두 물질, 단백질과 핵산입니다.</span></p>
+      </div>
+    </div>
+    <figure style="flex:.85"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22600%22%20viewBox%3D%220%200%20800%20600%22%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22%23e7e7ea%22/%3E%3Crect%20x%3D%22250%22%20y%3D%22255%22%20width%3D%22300%22%20height%3D%2290%22%20fill%3D%22%23f2f2f3%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22292%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2226%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EA%B5%90%EA%B3%BC%EC%84%9C%20%EC%82%AC%EC%A7%84%20%EC%9E%90%EB%A6%AC%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22328%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EC%88%98%EC%97%85%20%EC%8B%9C%EA%B0%84%EC%97%90%20%ED%95%A8%EA%BB%98%20%EB%B4%85%EB%8B%88%EB%8B%A4%3C/text%3E%3C/svg%3E" alt="의료진이 보호장비를 착용하고 면봉으로 코에서 검체를 채취하는 그림"><figcaption>비인두에서 검체를 채취한다</figcaption></figure>
+  </div>
+</section>
+
+<!-- 7 좌우비교 핵심 -->
+<section class="slide">
+  <h2><span class="tag c">비교</span> 두 가지 진단 검사법</h2>
+  <div class="vs">
+    <div class="side a">
+      <h3>신속항원검사</h3>
+      <figure style="flex:1;background:rgba(255,255,255,.75)">
+        <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22600%22%20viewBox%3D%220%200%20800%20600%22%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22%23e7e7ea%22/%3E%3Crect%20x%3D%22250%22%20y%3D%22255%22%20width%3D%22300%22%20height%3D%2290%22%20fill%3D%22%23f2f2f3%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22292%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2226%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EA%B5%90%EA%B3%BC%EC%84%9C%20%EC%82%AC%EC%A7%84%20%EC%9E%90%EB%A6%AC%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22328%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EC%88%98%EC%97%85%20%EC%8B%9C%EA%B0%84%EC%97%90%20%ED%95%A8%EA%BB%98%20%EB%B4%85%EB%8B%88%EB%8B%A4%3C/text%3E%3C/svg%3E" alt="장갑 낀 손이 신속항원검사 키트의 구멍에 검체 용액을 떨어뜨리는 사진">
+        <figcaption>신속항원검사를 통한 진단</figcaption>
+      </figure>
+      <div class="card" style="background:rgba(255,255,255,.9);border-color:#f3b98c">
+        <p class="lead">검체에 바이러스를 구성하는<br><b>단백질</b>이 있는지 확인</p>
+        <p class="note">비인두 검체 등을 <b>그대로</b> 사용 — 증폭 과정이 없다</p>
+      </div>
+    </div>
+    <div class="vsmid"><div class="vsbadge">VS</div></div>
+    <div class="side b">
+      <h3>유전자증폭검사</h3>
+      <figure style="flex:1;background:rgba(255,255,255,.75)">
+        <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22600%22%20viewBox%3D%220%200%20800%20600%22%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22%23e7e7ea%22/%3E%3Crect%20x%3D%22250%22%20y%3D%22255%22%20width%3D%22300%22%20height%3D%2290%22%20fill%3D%22%23f2f2f3%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22292%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2226%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EA%B5%90%EA%B3%BC%EC%84%9C%20%EC%82%AC%EC%A7%84%20%EC%9E%90%EB%A6%AC%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22328%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EC%88%98%EC%97%85%20%EC%8B%9C%EA%B0%84%EC%97%90%20%ED%95%A8%EA%BB%98%20%EB%B4%85%EB%8B%88%EB%8B%A4%3C/text%3E%3C/svg%3E" alt="장갑 낀 손이 실험 장비에서 검체가 담긴 작은 관을 다루는 사진">
+        <figcaption>유전자증폭검사를 통한 진단</figcaption>
+      </figure>
+      <div class="card" style="background:rgba(255,255,255,.9);border-color:#b9b2ee">
+        <p class="lead">검체 속 <b>특정 유전자를 증폭</b>한 뒤<br>바이러스가 있는지 확인</p>
+        <p class="note">유전자를 <b>늘려서</b> 본다 — 소량이어도 조기 진단 가능</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 실물자료 해석 -->
+<section class="slide">
+  <h2><span class="tag c">실물자료 해석</span> 숫자로 비교하면 — 교과서·지도서 자료</h2>
+  <div class="row">
+    <div class="col" style="flex:1.3">
+      <table>
+        <tr><th style="width:24%">기준</th><th>신속항원검사</th><th>유전자증폭검사</th></tr>
+        <tr><td><b>확인하는 물질</b></td><td>바이러스의 <b>단백질</b></td><td>검체 속 <b>특정 유전자(핵산)</b></td></tr>
+        <tr><td><b>증폭 과정</b></td><td>없음</td><td>있음</td></tr>
+        <tr><td><b>검사 시간</b></td><td><b>15분 ~ 30분</b> 이내</td><td>약 <b>3시간 ~ 6시간</b></td></tr>
+        <tr><td><b>비용</b></td><td>적게 소요</td><td>많이 소요</td></tr>
+        <tr><td><b>정확도</b></td><td>낮음 (바이러스가 미량이면 특히)</td><td>높음 (소량도 조기 진단)</td></tr>
+      </table>
+      <div class="card" style="flex:1;display:flex;align-items:center;justify-content:center">
+        <svg viewBox="0 0 620 120" width="100%" height="100%" role="img" aria-label="검사 시간 비교 막대그래프. 신속항원검사는 15에서 30분, 유전자증폭검사는 약 3시간에서 6시간으로 훨씬 길다">
+          <text x="8" y="26" font-size="18" font-weight="700" fill="#c2410c">신속항원검사</text>
+          <rect x="8" y="34" width="604" height="26" rx="5" fill="#fff" stroke="#d2cde6" stroke-width="2"/>
+          <rect x="8" y="34" width="50" height="26" rx="5" fill="#c2410c"/>
+          <text x="70" y="53" font-size="17" fill="#8a3708" font-weight="700">15~30분</text>
+          <text x="8" y="90" font-size="18" font-weight="700" fill="#2e2383">유전자증폭검사</text>
+          <rect x="8" y="98" width="604" height="26" rx="5" fill="#fff" stroke="#d2cde6" stroke-width="2"/>
+          <rect x="8" y="98" width="580" height="26" rx="5" fill="#4338ca"/>
+          <text x="298" y="117" font-size="17" fill="#fff" font-weight="700">약 3시간 ~ 6시간</text>
+        </svg>
+      </div>
+      <p class="note">활동지 2번 — 위 표의 빈칸을 직접 채우고, 두 검사의 차이가 어디에서 오는지 적어 봅시다.</p>
+    </div>
+    <div class="col" style="flex:.8">
+      <figure style="flex:1"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22600%22%20viewBox%3D%220%200%20800%20600%22%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22%23e7e7ea%22/%3E%3Crect%20x%3D%22250%22%20y%3D%22255%22%20width%3D%22300%22%20height%3D%2290%22%20fill%3D%22%23f2f2f3%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22292%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2226%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EA%B5%90%EA%B3%BC%EC%84%9C%20%EC%82%AC%EC%A7%84%20%EC%9E%90%EB%A6%AC%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22328%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EC%88%98%EC%97%85%20%EC%8B%9C%EA%B0%84%EC%97%90%20%ED%95%A8%EA%BB%98%20%EB%B4%85%EB%8B%88%EB%8B%A4%3C/text%3E%3C/svg%3E" alt="화면이 달린 흰색 유전자 증폭 장비 사진"><figcaption>유전자를 증폭하는 장비</figcaption></figure>
+      <figure style="flex:1"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22600%22%20viewBox%3D%220%200%20800%20600%22%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22%23e7e7ea%22/%3E%3Crect%20x%3D%22250%22%20y%3D%22255%22%20width%3D%22300%22%20height%3D%2290%22%20fill%3D%22%23f2f2f3%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22292%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2226%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EA%B5%90%EA%B3%BC%EC%84%9C%20%EC%82%AC%EC%A7%84%20%EC%9E%90%EB%A6%AC%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22328%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EC%88%98%EC%97%85%20%EC%8B%9C%EA%B0%84%EC%97%90%20%ED%95%A8%EA%BB%98%20%EB%B4%85%EB%8B%88%EB%8B%A4%3C/text%3E%3C/svg%3E" alt="같은 유전자 증폭 장비를 비스듬히 찍은 사진"><figcaption>증폭에는 시간이 걸린다</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 9 왜 -->
+<section class="slide">
+  <h2><span class="tag">전개</span> [왜] 왜 유전자증폭검사가 더 정밀할까?</h2>
+  <div class="row">
+    <div class="col" style="flex:1.3">
+      <div class="card" style="flex:1;display:flex;align-items:center;justify-content:center">
+        <svg viewBox="0 0 620 210" width="100%" height="100%" role="img" aria-label="바이러스의 핵산이 적은 양일 때, 증폭하지 않으면 못 찾을 수 있지만 여러 번 늘리면 찾아낼 수 있음을 점의 개수로 나타낸 그림">
+          <text x="10" y="24" font-size="19" font-weight="700" fill="#161228">검체 속 바이러스 핵산은 양이 적다</text>
+          <g fill="#4338ca"><circle cx="40" cy="60" r="6"/><circle cx="72" cy="78" r="6"/><circle cx="56" cy="98" r="6"/></g>
+          <rect x="14" y="40" width="110" height="78" rx="9" fill="none" stroke="#4338ca" stroke-width="2.5" stroke-dasharray="6 5"/>
+          <text x="69" y="138" font-size="16" text-anchor="middle" fill="#44405c">적은 양</text>
+          <path d="M132 79 L186 79" stroke="#c2410c" stroke-width="5" marker-end="url(#a2)"/>
+          <text x="159" y="68" font-size="16" text-anchor="middle" font-weight="700" fill="#c2410c">증폭</text>
+          <rect x="194" y="40" width="150" height="78" rx="9" fill="none" stroke="#4338ca" stroke-width="2.5"/>
+          <g fill="#4338ca">
+            <circle cx="214" cy="56" r="6"/><circle cx="242" cy="56" r="6"/><circle cx="270" cy="56" r="6"/><circle cx="298" cy="56" r="6"/><circle cx="326" cy="56" r="6"/>
+            <circle cx="214" cy="80" r="6"/><circle cx="242" cy="80" r="6"/><circle cx="270" cy="80" r="6"/><circle cx="298" cy="80" r="6"/><circle cx="326" cy="80" r="6"/>
+            <circle cx="214" cy="104" r="6"/><circle cx="242" cy="104" r="6"/><circle cx="270" cy="104" r="6"/><circle cx="298" cy="104" r="6"/><circle cx="326" cy="104" r="6"/>
+          </g>
+          <text x="269" y="138" font-size="16" text-anchor="middle" fill="#44405c">늘어난 양</text>
+          <path d="M352 79 L404 79" stroke="#44405c" stroke-width="5" marker-end="url(#a3)"/>
+          <rect x="412" y="40" width="198" height="78" rx="9" fill="#e8e6fa" stroke="#4338ca" stroke-width="3"/>
+          <text x="511" y="70" font-size="19" font-weight="700" text-anchor="middle" fill="#2e2383">적은 양이어도</text>
+          <text x="511" y="98" font-size="19" font-weight="700" text-anchor="middle" fill="#2e2383">찾아낼 수 있다</text>
+          <text x="10" y="178" font-size="19" fill="#161228">신속항원검사는 <tspan font-weight="700" fill="#c2410c">증폭하지 않고 단백질을 그대로</tspan> 보므로,</text>
+          <text x="10" y="202" font-size="19" fill="#161228">바이러스가 미량이면 <tspan font-weight="700" fill="#c2410c">놓칠 수 있다.</tspan></text>
+          <defs>
+            <marker id="a2" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#c2410c"/></marker>
+            <marker id="a3" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#44405c"/></marker>
+          </defs>
+        </svg>
+      </div>
+      <div class="card i">
+        <p class="big">그래서 — 신속항원검사는 간편하고 비교적 정확하게 진단하지만,<br>
+        <b>감염 여부의 최종 진단은 일반적으로 유전자증폭검사로</b> 이루어집니다.</p>
+      </div>
+    </div>
+    <figure style="flex:.75"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22600%22%20viewBox%3D%220%200%20800%20600%22%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22%23e7e7ea%22/%3E%3Crect%20x%3D%22250%22%20y%3D%22255%22%20width%3D%22300%22%20height%3D%2290%22%20fill%3D%22%23f2f2f3%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22292%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2226%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EA%B5%90%EA%B3%BC%EC%84%9C%20%EC%82%AC%EC%A7%84%20%EC%9E%90%EB%A6%AC%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22328%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EC%88%98%EC%97%85%20%EC%8B%9C%EA%B0%84%EC%97%90%20%ED%95%A8%EA%BB%98%20%EB%B4%85%EB%8B%88%EB%8B%A4%3C/text%3E%3C/svg%3E" alt="유전자 염기서열이 색색의 봉우리 그래프로 표시된 화면"><figcaption>증폭한 유전자를 읽어 확인한다</figcaption></figure>
+  </div>
+</section>
+
+<!-- 10 비교축 -->
+<section class="slide">
+  <h2><span class="tag c">비교축</span> 자연의 원리 ↔ 생활·기술 적용</h2>
+  <div class="row">
+    <div class="col" style="flex:1.4">
+      <table>
+        <tr><th style="width:19%"></th>
+            <th>자연의 원리<br><span style="font-weight:400">병원체를 이루는 물질</span></th>
+            <th>생활·기술 적용<br><span style="font-weight:400">그 물질을 겨냥한 검사법</span></th></tr>
+        <tr><td><b>같은 점</b></td><td colspan="2">둘 다 <b>'검체에 병원체가 있는가'</b>를 확인하려는 것이다.</td></tr>
+        <tr><td><b>다른 점</b></td><td>바이러스는 <b>단백질 껍질</b>과 <b>핵산</b>으로 이루어져 있다.</td><td>단백질을 <b>그대로</b> 보는 검사와, 핵산을 <b>증폭해서</b> 보는 검사로 갈린다.</td></tr>
+        <tr><td><b>다른 이유</b></td><td>핵산은 <b>양이 적다.</b></td><td>적은 것을 보려면 <b>늘려야</b> 하고, 늘리는 데는 <b>시간과 비용</b>이 든다.</td></tr>
+      </table>
+      <div class="card c">
+        <p class="big">기술의 우열이 아니라 <u>무엇을 보느냐</u>의 차이입니다.<br>
+        그래서 '어느 쪽이 더 좋은가'가 아니라 <u>'지금 상황에 어느 쪽이 맞는가'</u>를 물어야 합니다.</p>
+      </div>
+      <p class="note">활동지 3번에 이 표를 직접 채우고, '왜 이런 차이가 생길까' 칸은 스스로 추론해 씁니다.</p>
+    </div>
+    <figure style="flex:.75"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22600%22%20viewBox%3D%220%200%20800%20600%22%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22%23e7e7ea%22/%3E%3Crect%20x%3D%22250%22%20y%3D%22255%22%20width%3D%22300%22%20height%3D%2290%22%20fill%3D%22%23f2f2f3%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22292%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2226%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EA%B5%90%EA%B3%BC%EC%84%9C%20%EC%82%AC%EC%A7%84%20%EC%9E%90%EB%A6%AC%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22328%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EC%88%98%EC%97%85%20%EC%8B%9C%EA%B0%84%EC%97%90%20%ED%95%A8%EA%BB%98%20%EB%B4%85%EB%8B%88%EB%8B%A4%3C/text%3E%3C/svg%3E" alt="투명한 액체가 담긴 접시와 분홍색으로 변한 액체가 담긴 접시를 나란히 놓은 사진"><figcaption>결과를 색 변화로 읽어 내기도 한다</figcaption></figure>
+  </div>
+</section>
+
+<!-- 11 최신 기술 -->
+<section class="slide">
+  <h2><span class="tag">전개</span> [그래서] 진단 기술은 계속 나아가고 있다</h2>
+  <div class="row">
+    <div class="col" style="flex:1.2">
+      <div class="steps" style="flex:1">
+        <div class="step" style="border-color:var(--indigo)">
+          <b>나노바이오센서</b>
+          <p>효소·항원·항체·DNA 같은 생물학적 수용체를 이용해 <b>분자 수준에서 물질을 검출</b>하고, 이를 해석할 수 있는 신호로 바꿔 주는 장치입니다.</p>
+          <p class="note">나노 기술을 바탕으로 만들어, <b>아주 적은 양의 병원체도 실시간으로</b> 검출할 수 있습니다.</p>
+        </div>
+        <div class="step" style="border-color:var(--coral)">
+          <b>생물정보학</b>
+          <p>대량으로 생산되는 생명과학 데이터를 <b>컴퓨터로 분석</b>하는 학문입니다.</p>
+          <p class="note">빅데이터·인공지능 기술과 결합하면서, 유전자서열 정보부터 <b>감염병 바이러스의 변이 분석</b>까지 신종 감염병 연구에 활발히 쓰입니다.</p>
+        </div>
+      </div>
+      <div class="card i">
+        <p class="lead">공통점을 찾아봅시다 — 두 기술 모두 <b>'더 적은 양을, 더 빨리, 더 많이'</b> 보려는 방향으로 가고 있습니다.</p>
+      </div>
+    </div>
+    <div class="col" style="flex:.8">
+      <figure style="flex:1"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22600%22%20viewBox%3D%220%200%20800%20600%22%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22%23e7e7ea%22/%3E%3Crect%20x%3D%22250%22%20y%3D%22255%22%20width%3D%22300%22%20height%3D%2290%22%20fill%3D%22%23f2f2f3%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22292%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2226%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EA%B5%90%EA%B3%BC%EC%84%9C%20%EC%82%AC%EC%A7%84%20%EC%9E%90%EB%A6%AC%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22328%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EC%88%98%EC%97%85%20%EC%8B%9C%EA%B0%84%EC%97%90%20%ED%95%A8%EA%BB%98%20%EB%B4%85%EB%8B%88%EB%8B%A4%3C/text%3E%3C/svg%3E" alt="무색 액체와 분홍색 액체가 각각 담긴 두 개의 배양 접시 사진"><figcaption>색 변화로 나타나는 검출 신호</figcaption></figure>
+      <figure style="flex:1"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22600%22%20viewBox%3D%220%200%20800%20600%22%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22%23e7e7ea%22/%3E%3Crect%20x%3D%22250%22%20y%3D%22255%22%20width%3D%22300%22%20height%3D%2290%22%20fill%3D%22%23f2f2f3%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22292%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2226%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EA%B5%90%EA%B3%BC%EC%84%9C%20%EC%82%AC%EC%A7%84%20%EC%9E%90%EB%A6%AC%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22328%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EC%88%98%EC%97%85%20%EC%8B%9C%EA%B0%84%EC%97%90%20%ED%95%A8%EA%BB%98%20%EB%B4%85%EB%8B%88%EB%8B%A4%3C/text%3E%3C/svg%3E" alt="실험실에서 장갑 낀 손이 검체 관을 장비에 넣는 사진"><figcaption>분석은 점점 자동화되고 있다</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 12 활동 안내 -->
+<section class="slide">
+  <h2><span class="tag g">모둠 활동</span> 우리 학교 '검사 안내문' 만들기 &nbsp;<span class="sub">활동지 4번</span></h2>
+  <div class="row">
+    <div class="col" style="flex:1.2">
+      <div class="card i">
+        <p class="big">아래 세 상황에서 <b>어떤 검사를 권할지</b> 정하고, 그 까닭을 한 줄로 적어 학교 안내문을 만들어 봅시다.</p>
+      </div>
+      <table>
+        <tr><th style="width:8%">상황</th><th>설명</th></tr>
+        <tr><td><b>①</b></td><td>내일 아침 수학여행 출발 — 오늘 저녁에 목이 조금 아프다</td></tr>
+        <tr><td><b>②</b></td><td>증상은 없지만, 확진자와 같은 공간에 오래 있었던 것 같다</td></tr>
+        <tr><td><b>③</b></td><td>신속항원검사에서 음성이 나왔는데 열이 계속 난다</td></tr>
+      </table>
+      <div class="card c">
+        <h3>안내문에 꼭 담을 것</h3>
+        <ul>
+          <li>권하는 검사 이름과 <b>그 까닭</b> (시간·비용·정확도 중 무엇을 더 중요하게 봤는지)</li>
+          <li>그 검사의 <b>한계</b>도 한 줄 (좋은 점만 쓰지 않기)</li>
+        </ul>
+      </div>
+      <p class="note">모둠 역할: 사회자 · 기록자 · 발표자 · 자료검색 (활동지 표에 이름을 적으세요)</p>
+    </div>
+    <figure style="flex:.75"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22600%22%20viewBox%3D%220%200%20800%20600%22%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22%23e7e7ea%22/%3E%3Crect%20x%3D%22250%22%20y%3D%22255%22%20width%3D%22300%22%20height%3D%2290%22%20fill%3D%22%23f2f2f3%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22292%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2226%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EA%B5%90%EA%B3%BC%EC%84%9C%20%EC%82%AC%EC%A7%84%20%EC%9E%90%EB%A6%AC%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22328%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EC%88%98%EC%97%85%20%EC%8B%9C%EA%B0%84%EC%97%90%20%ED%95%A8%EA%BB%98%20%EB%B4%85%EB%8B%88%EB%8B%A4%3C/text%3E%3C/svg%3E" alt="학생 두 명이 책상에 마주 앉아 태블릿과 공책을 보며 의논하는 사진"><figcaption>근거를 적어 두고 의논합니다</figcaption></figure>
+  </div>
+</section>
+
+<!-- 13 정리 -->
+<section class="slide">
+  <h2><span class="tag g">정리</span> 오늘 배운 것</h2>
+  <div class="row">
+    <div class="col" style="flex:1.3">
+      <div class="steps">
+        <div class="step"><b>① 병원체</b>감염병은 세균·바이러스·곰팡이·원생생물에 <b>감염</b>되어 생긴다. <b>전염</b>과는 다른 말이다.</div>
+        <div class="step"><b>② 두 검사</b>신속항원검사는 <b>단백질</b>을, 유전자증폭검사는 <b>핵산을 증폭해서</b> 본다.</div>
+        <div class="step"><b>③ 선택</b>빠르고 싼 쪽과 정확한 쪽 사이에서, <b>상황에 맞춰</b> 고른다.</div>
+      </div>
+      <div class="card c">
+        <p class="huge">다시, 핵심 질문</p>
+        <p class="big">"같은 감염병을 두 가지 방법으로 진단할 수 있다면, 무엇을 기준으로 골라야 할까?"</p>
+        <p class="note">활동지 5번에 <b>자기 문장</b>으로 한 줄 답을 적어 봅시다. 정답은 하나가 아닙니다.</p>
+      </div>
+      <div class="card">
+        <b>다음 시간 예고</b> — 감염병을 <b>추적하고 관리하는</b> 데 과학 기술이 어떻게 쓰이는지 알아보고, 진단 기술을 직접 체험해 봅니다.
+      </div>
+    </div>
+    <figure style="flex:.75"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22600%22%20viewBox%3D%220%200%20800%20600%22%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22%23e7e7ea%22/%3E%3Crect%20x%3D%22250%22%20y%3D%22255%22%20width%3D%22300%22%20height%3D%2290%22%20fill%3D%22%23f2f2f3%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22292%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2226%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EA%B5%90%EA%B3%BC%EC%84%9C%20%EC%82%AC%EC%A7%84%20%EC%9E%90%EB%A6%AC%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22328%22%20font-family%3D%22Malgun%20Gothic%2Csans-serif%22%20font-size%3D%2220%22%20text-anchor%3D%22middle%22%20fill%3D%22%235d5d60%22%3E%EC%88%98%EC%97%85%20%EC%8B%9C%EA%B0%84%EC%97%90%20%ED%95%A8%EA%BB%98%20%EB%B4%85%EB%8B%88%EB%8B%A4%3C/text%3E%3C/svg%3E" alt="신속항원검사 키트에 검체를 떨어뜨리는 사진"><figcaption>내가 받아 본 그 검사도, 과학입니다</figcaption></figure>
+  </div>
+</section>
+
+<!-- 14 형성평가 -->
+<section class="slide">
+  <h2><span class="tag c">형성평가</span> 눌러서 정답 확인</h2>
+  <div class="row">
+    <div class="col">
+      <div class="q">
+        <p class="ask">1. 감염병 진단과 추적에 대한 설명으로 옳은 것을 <u>모두</u> 고르시오. <span class="sub">(교과서 확인학습)</span></p>
+        <p>ㄱ. 감염병 진단은 채취한 검체에 병원체가 존재하는지를 확인하여 이루어진다.<br>
+           ㄴ. 감염병 추적은 감염원의 특징을 이해하고 감염병 환자의 동선을 파악하는 과정을 포함한다.<br>
+           ㄷ. 감염병 관리의 전 과정에서 과학이 활용되고 있다.</p>
+        <button class="btn" onclick="tog(this)">정답 보기</button>
+        <div class="ans"><b>ㄱ, ㄴ, ㄷ</b> — 모두 옳습니다. 과학은 진단과 추적뿐 아니라 <b>방역과 치료를 포함한 감염병 관리의 전 과정</b>에서 활용되고 있습니다.</div>
+      </div>
+      <div class="q">
+        <p class="ask">2. 빈칸을 채우시오. <span class="sub">(교과서 확인학습)</span></p>
+        <p>감염병은 바이러스·세균·곰팡이 등과 같은 ( ① )에 감염되어 발생하는 질병으로,<br>
+           일반적으로 단백질을 이용하여 진단하거나 ( ② )을/를 증폭한 뒤 보다 정밀하게 진단한다.</p>
+        <button class="btn" onclick="tog(this)">정답 보기</button>
+        <div class="ans"><b>① 병원체 &nbsp; ② 핵산</b></div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="q">
+        <p class="ask">3. 신속항원검사와 유전자증폭검사를 비교한 설명으로 <u>옳지 않은</u> 것은?</p>
+        <p>① 신속항원검사는 바이러스를 구성하는 단백질을 확인한다.<br>
+           ② 유전자증폭검사는 검사 시간이 더 길고 비용이 많이 든다.<br>
+           ③ 신속항원검사는 유전자를 증폭하므로 소량의 바이러스도 찾아낸다.</p>
+        <button class="btn" onclick="tog(this)">정답 보기</button>
+        <div class="ans"><b>③</b> — 유전자를 증폭하는 것은 <b>유전자증폭검사</b>입니다. 신속항원검사는 비인두 검체 등을 그대로 사용하므로 바이러스가 미량이면 정확도가 낮습니다.</div>
+      </div>
+      <div class="q" style="border-color:var(--indigo)">
+        <p class="ask">4. <span class="tag">서술형 · 정답이 하나가 아님</span><br>
+        학교에서 한 가지 검사만 쓸 수 있다면 어느 쪽을 택하시겠습니까? 자신의 입장을 정하고,
+        <b>그 검사의 한계를 알면서도 택한 까닭</b>을 들어 쓰시오.</p>
+        <button class="btn" onclick="tog(this)">채점 관점 보기</button>
+        <div class="ans"><b>채점 관점</b> — 정답은 정해져 있지 않습니다. ① 입장을 분명히 밝혔는가, ② 근거가 <b>시간·비용·정확도</b> 중 하나 이상에 닿아 있는가, ③ 택한 검사의 <b>한계를 함께 적었는가</b>로 봅니다.<br>
+        <span class="sub">신속항원 예: 15~30분이면 결과가 나와 당장 등교 여부를 정할 수 있다 / 다만 미량이면 놓칠 수 있어 증상이 계속되면 다시 확인해야 한다.<br>
+        유전자증폭 예: 최종 진단에 쓰일 만큼 정확하다 / 다만 3~6시간이 걸려 급할 때는 쓰기 어렵고 비용도 많이 든다.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="bar"></div>
+<footer>
+  <button class="nav" onclick="go(-1)">◀</button>
+  <button class="nav" onclick="go(1)">▶</button>
+  <span>← → 방향키로도 넘길 수 있습니다</span>
+  <span class="spacer"></span>
+  <span>통합과학2 · 35차시 · 과학의 유용성과 필요성</span>
+  <span id="pg" style="font-weight:700"></span>
+</footer>
+
+<script>
+  var S = document.querySelectorAll('.slide'), i = 0;
+  function show(n){
+    S[i].classList.remove('on');
+    i = Math.max(0, Math.min(S.length-1, n));
+    S[i].classList.add('on');
+    document.getElementById('pg').textContent = (i+1) + ' / ' + S.length;
+    document.getElementById('bar').style.width = ((i+1)/S.length*100) + '%';
+  }
+  function go(d){ show(i+d); }
+  function tog(b){ b.nextElementSibling.classList.toggle('show'); }
+  document.addEventListener('keydown', function(e){
+    if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' '){e.preventDefault();go(1);}
+    if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(-1);}
+    if(e.key==='Home') show(0);
+    if(e.key==='End') show(S.length-1);
+  });
+  show(0);
+</script>
+</body>
+</html>
